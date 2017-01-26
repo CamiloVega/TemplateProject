@@ -3,17 +3,19 @@ A useful template to get an app started using a local web sever
 
 Uses Android annotations, Jackson annotation and  Picaso
 
-To get started, based on the tutorial from https://stormpath.com/blog/tutorial-build-rest-api-mobile-apps-using-node-js
+To get started, based on the tutorial from https://stormpath.com/blog/tutorial-build-rest-api-mobile-apps-using-node-js.
 All credit for the information below is to them, I'm just putting it in one place. 
 Follow this instructions to start a local web server and get this project working
 
 1 - Install the Node.js runtime. You can install the “Current” (v6) version of Node.
+
 2 - Create a folder, navigate to it in the command line or terminal, and run:
 
   `npm init`
 
 npm will ask you a lot of questions — feel free to leave them as the default!
-3- install express by running
+
+3- install express by runnini
 
  ` npm install --save express `
   
@@ -23,8 +25,7 @@ npm will ask you a lot of questions — feel free to leave them as the default!
  
   var app = express()
  
-  app.get('/ping', function(req, res) {
-    res.json({response: "The server is up and running :) "})
+asdfaasdf    res.json({response: "The server is up and running :) "})
   })
  
   app.listen(3000) 
