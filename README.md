@@ -10,16 +10,16 @@ Follow this instructions to start a local web server and get this project workin
 1 - Install the Node.js runtime. You can install the “Current” (v6) version of Node.
 2 - Create a folder, navigate to it in the command line or terminal, and run:
 
-  npm init
+  `npm init`
 
 npm will ask you a lot of questions — feel free to leave them as the default!
 3- install express by running
 
-  npm install --save express
+ ` npm install --save express `
   
 4- Create a file named index.js, and type in the following:
 
-  var express = require('express')
+ ` var express = require('express')
  
   var app = express()
  
@@ -27,13 +27,13 @@ npm will ask you a lot of questions — feel free to leave them as the default!
     res.json({response: "The server is up and running :) "})
   })
  
-  app.listen(3000)
+  app.listen(3000) `
  
 5- Determine your computer ip address (depends on your computer)
 
 6- Run the command:
   
-  node index.js
+  `node index.js`
   
 7- modify the constant ROOT_URL in the file RestManager of the android project. this is so it points to your local server.
   keep in mind that if your ip address is local, your android device should also be in that local network.  
