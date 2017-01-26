@@ -18,8 +18,8 @@ npm will ask you a lot of questions — feel free to leave them as the default!
  ` npm install --save express `
   
 4- Create a file named index.js, and type in the following:
-
- ` var express = require('express')
+```
+  var express = require('express')
  
   var app = express()
  
@@ -27,7 +27,8 @@ npm will ask you a lot of questions — feel free to leave them as the default!
     res.json({response: "The server is up and running :) "})
   })
  
-  app.listen(3000) `
+  app.listen(3000) 
+  ```
  
 5- Determine your computer ip address (depends on your computer)
 
