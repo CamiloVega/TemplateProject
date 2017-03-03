@@ -1,11 +1,84 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AlquilaloToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/bar_light_grey</item>
+    </style>
+
+    <style name="FacebookSignInButton" parent="TiltButton.NoMargin.FullWidth">
+        <item name="leadingDrawable">@mipmap/facebook_icon_white</item>
+    </style>
+
+    <style name="EditTextNoPadding">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/cell_height</item>
+        <item name="android:textSize">@dimen/subheading_text</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EditText" parent="EditTextNoPadding">
+        <item name="android:padding">@dimen/padding</item>
+    </style>
+
+    <style name="TiltButton">
+        <item name="android:textColor">@color/btn_text</item>
+        <item name="android:background">@drawable/bg_button_no_radius</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+
+    <style name="TiltButton.HugePadding">
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:paddingLeft">@dimen/huge_padding</item>
+        <item name="android:paddingRight">@dimen/huge_padding</item>
+    </style>
+
+    <style name="TiltButton.HugePadding.FullWidth">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TiltButton.NoMargin">
+        <item name="android:layout_margin">@dimen/no_margin</item>
+    </style>
+
+    <style name="TiltButton.NoMargin.FullWidth">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TitleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">@dimen/title_text</item>
+    </style>
+
+    <style name="SubHeaderText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">@dimen/subheading_text</item>
+    </style>
+
+    <style name="SubHeaderText.Green">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/green</item>
     </style>
 
 </resources>

@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cvdevelopers.restfull.fragments.CreateItemDetailsFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            style="@style/EditText"
+            android:id="@+id/item_name"
+            android:inputType="textCapWords"
+            android:hint="@string/item_name_hint"
+            android:maxLength="100"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/margin"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:srcCompat="@color/bar_light_grey"
+            android:id="@+id/item_image"
+            android:layout_below="@+id/item_name"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin" />
+
+
+
+        <EditText
+            style="@style/EditText"
+            android:id="@+id/item_price"
+            android:inputType="number"
+            android:hint="@string/item_price_hint"
+            android:maxLength="100"
+            android:layout_below="@+id/item_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/margin"
+            android:textAlignment="viewEnd" />
+
+        <TextView
+            android:text="@string/commission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_price"
+
+            android:id="@+id/comission_label"
+            android:layout_toRightOf="@id/comission_label"
+            android:layout_toStartOf="@+id/comission_text"
+            android:layout_marginRight="@dimen/margin" />
+
+        <TextView
+            android:text="2000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_price"
+            android:layout_alignRight="@+id/item_price"
+            android:layout_alignEnd="@+id/item_price"
+            android:id="@+id/comission_text"
+            android:layout_marginBottom="10dp" />
+
+        <include
+            android:id="@+id/total_divider"
+            android:layout_width="match_parent"
+            layout="@layout/divider_horizontal"
+            android:layout_below="@+id/comission_text"
+            android:layout_alignRight="@+id/comission_text"
+            android:layout_alignEnd="@+id/comission_text"
+            android:layout_alignLeft="@+id/comission_label"
+            android:layout_alignStart="@+id/comission_label"
+            android:layout_height="2dp" />
+
+        <TextView
+            android:text="Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_divider"
+            android:layout_toLeftOf="@+id/comission_text"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView4"
+            android:layout_alignStart="@+id/comission_label" />
+
+        <TextView
+            android:text="2000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4"
+            android:id="@+id/total_price_text" />
+
+        <Button
+            android:text="@string/publicar"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/publish_item_button"
+            style="@style/TiltButton.HugePadding.FullWidth" />
+    </RelativeLayout>
+
+
+</LinearLayout>

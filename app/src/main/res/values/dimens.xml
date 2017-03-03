@@ -2,4 +2,52 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="elevation_toolbar">4dp</dimen>
+
+    <dimen name="tiny_padding">4dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="medium_padding">18dp</dimen>
+    <dimen name="large_padding">20dp</dimen>
+    <dimen name="huge_padding">32dp</dimen>
+
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="extra_tiny_margin">2dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+    <dimen name="pretty_tiny_margin">5dp</dimen>
+    <dimen name="smaller_margin">6dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_negative_margin">-8dp</dimen>
+    <dimen name="normal_margin">12dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="medium_margin">24dp</dimen>
+    <dimen name="large_margin">32dp</dimen>
+    <dimen name="larger_margin">48dp</dimen>
+    <dimen name="huge_margin">64dp</dimen>
+    <dimen name="extra_large_margin">128dp</dimen>
+
+    <dimen name="cell_height">56dp</dimen>
+
+
+    <!-- Required per Android weirdness w/ varyin radius in one shape -->
+    <dimen name="no_radius">0dp</dimen>
+    <dimen name="small_corner_radius">2dp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="big_corner_radius">6dp</dimen>
+
+    <dimen name="thin_divider">0.5dp</dimen>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="thick_divider">2dp</dimen>
+    <dimen name="extra_thick_divider">7dp</dimen>
+
+    <!-- Per Google's Best Practices -->
+    <dimen name="tiny_text">10sp</dimen>
+    <dimen name="caption_text">12sp</dimen>
+    <dimen name="body_text">14sp</dimen>
+    <dimen name="subheading_text">16sp</dimen>
+    <dimen name="title_text">20sp</dimen>
+    <dimen name="headline_text">24sp</dimen>
+    <dimen name="large_text">30sp</dimen>
+    <dimen name="huge_text">34sp</dimen>
+
 </resources>

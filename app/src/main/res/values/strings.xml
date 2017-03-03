@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Rest Full</string>
+    <string name="app_name">Alquilalo</string>
+    <string name="log_in">Iniciar Secion</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Crear cuenta</string>
+
+    <string name="fb_login">Continua con Facebook</string>
+
+    <string name="first_name">Nombres</string>
+    <string name="last_name">Apellidos</string>
+    <string name="email">Email</string>
+
+
+    <string name="password">Contraseña</string>
+    <string name="password_hint">Contraseña (min. 6 caracteres)</string>
+
+    <string name="item_name_hint">Titulo del articulo</string>
+    <string name="item_price_hint">Precio del articulo</string>
+    <string name="commission">+15%</string>
+    <string name="publicar">Publicar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

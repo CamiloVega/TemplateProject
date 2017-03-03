@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cvdevelopers.restfull.fragments.RentalItemConfirmationFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Felicitaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView"
+            style="@style/TitleText"
+            android:layout_marginTop="@dimen/huge_margin" />
+
+        <com.cvdevelopers.restfull.view.RentalItemCellView_
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_cell"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/huge_margin" />
+
+        <TextView
+            android:text="Ha sido publicado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            style="@style/TitleText"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/item_cell"
+            android:layout_marginTop="@dimen/large_margin" />
+
+        <Button
+            android:id="@+id/add_another_item_button"
+            android:text="Agregar otro articulo"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/go_home_button"
+            style="@style/TiltButton.HugePadding.FullWidth" />
+
+        <Button
+            android:id="@+id/go_home_button"
+            android:text="Explorar articulos"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            style="@style/TiltButton.HugePadding.FullWidth" />
+
+    </RelativeLayout>
+
+</LinearLayout>
