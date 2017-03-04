@@ -28,11 +28,11 @@ public interface RestClient extends RestClientHeaders, RestClientRootUrl, RestCl
     ResponseEntity<Response> pingServer();
 
     @Get("/api/availableRentalItems")
-    RentalItems getRentalItems();
+    ResponseEntity<RentalItems> getRentalItems();
 
     @Get("/api/oneRentalItem")
-    RentalItem getRentalItem();
+    ResponseEntity<RentalItem> getRentalItem();
 
     @Post("/api/setRentalItem")
-    RentalItem postRentalItem(@Body RentalItem rentalItem);
+    ResponseEntity<RentalItem> postRentalItem(@Body RentalItem rentalItem);
 }

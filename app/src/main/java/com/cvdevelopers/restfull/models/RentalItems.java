@@ -9,7 +9,7 @@ import java.util.List;
  * Created by CamiloVega on 3/1/17.
  */
 
-public class RentalItems {
+public class RentalItems extends ApiResponseModel{
 
     @JsonProperty("rental_items")
     private List<RentalItem> rentalItems;

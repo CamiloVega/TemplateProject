@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.cvdevelopers.restfull.R;
+import com.cvdevelopers.restfull.api.exceptions.ApiUnavailableException;
+import com.cvdevelopers.restfull.api.exceptions.ServiceException;
 import com.cvdevelopers.restfull.fragments.CreateItemDetailsFragment;
 import com.cvdevelopers.restfull.fragments.CreateItemDetailsFragment_;
 import com.cvdevelopers.restfull.fragments.RentalItemConfirmationFragment;
@@ -16,6 +18,7 @@ import com.cvdevelopers.restfull.fragments.RentalItemConfirmationFragment_;
 import com.cvdevelopers.restfull.managers.ImageManager;
 import com.cvdevelopers.restfull.models.RentalItem;
 import com.cvdevelopers.restfull.services.RentalItemService;
+import com.cvdevelopers.restfull.util.FileUtils;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
@@ -37,6 +40,8 @@ import static com.cvdevelopers.restfull.managers.ImageManager.REQUEST_CODE_SELEC
 @EActivity(R.layout.create_item_rental_activity)
 public class CreateItemRentalActivity extends AppCompatActivity
         implements CreateItemDetailsFragment.CreateItemDetailsFragmentListener, RentalItemConfirmationFragment.RentalItemConfirmationFragmentListener {
+
+    private static final String TAG = CreateItemRentalActivity.class.getName();
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -103,11 +108,18 @@ public class CreateItemRentalActivity extends AppCompatActivity
 
     @Background
     protected void postRentalItem(RentalItem rentalItem) {
-        RentalItem newRentalItem = rentalItemService.postRentalItem(rentalItem);
-        Log.i("ITEM", newRentalItem.toString());
-        RentalItemConfirmationFragment rentalItemFragment = RentalItemConfirmationFragment_.builder().build();
-        rentalItemFragment.setRentalItem(rentalItem);
-        setVisibleFragment(rentalItemFragment, "");
+        try {
+            RentalItem newRentalItem = rentalItemService.postRentalItem(rentalItem);
+            Log.i("ITEM", newRentalItem.toString());
+            RentalItemConfirmationFragment rentalItemFragment = RentalItemConfirmationFragment_.builder().build();
+            rentalItemFragment.setRentalItem(rentalItem);
+            setVisibleFragment(rentalItemFragment, "");
+        } catch (ApiUnavailableException e) {
+           finish();
+        } catch (ServiceException e) {
+            Log.e(TAG, e.toString());
+        }
+
     }
 
     @Override
@@ -116,6 +128,7 @@ public class CreateItemRentalActivity extends AppCompatActivity
     }
 
     @Override
+    @UiThread
     public void onGoHomePressed() {
         finish();
     }

@@ -8,9 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Created by CamiloVega on 2/20/17.
  */
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class GUIDModel {
+public class GUIDModel extends ApiResponseModel {
 
     public static final String GUID_FIELD = "guid";
 
