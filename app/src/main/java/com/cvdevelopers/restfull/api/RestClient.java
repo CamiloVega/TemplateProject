@@ -16,7 +16,7 @@ import static com.cvdevelopers.restfull.api.RestManager.ROOT_URL;
  * Created by Camilo Vega on 1/25/17.
  */
 
-@Rest(rootUrl = ROOT_URL, converters = {MappingJackson2HttpMessageConverter.class})
+@Rest(rootUrl = ROOT_URL, converters = {MappingJackson2HttpMessageConverter.class}, interceptors = {RestLogger.class})
 public interface RestClient extends RestClientHeaders, RestClientRootUrl, RestClientSupport {
 
     @Get("/ping")
