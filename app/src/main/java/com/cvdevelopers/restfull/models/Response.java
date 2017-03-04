@@ -7,8 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Created by Camilo Vega on 1/26/17.
  */
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Response {
+public class Response extends ApiResponseModel{
 
     @JsonProperty("response")
     protected String response;
@@ -24,4 +23,3 @@ public class Response {
         this.response = response;
     }
 }
-
