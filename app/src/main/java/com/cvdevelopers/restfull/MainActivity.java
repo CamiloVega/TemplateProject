@@ -1,11 +1,10 @@
 package com.cvdevelopers.restfull;
 
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-
-import com.cvdevelopers.restfull.api.RestManager;
+import com.cvdevelopers.restfull.api.exceptions.ApiUnavailableException;
+import com.cvdevelopers.restfull.api.exceptions.ServiceException;
 import com.cvdevelopers.restfull.models.Response;
 import com.cvdevelopers.restfull.services.PingService;
 
@@ -39,9 +38,15 @@ public class MainActivity extends AppCompatActivity {
     //annotation to run this method in the background
     @Background
     protected void pingTheServer() {
-        Response response = pingService.pingServer();
-        Log.i(TAG, response.getResponse());
-        updateLabelWithResponse(response.getResponse());
+        try {
+            Response response = pingService.pingServer();
+            Log.i(TAG, response.getResponse());
+            updateLabelWithResponse(response.getResponse());
+        } catch (ApiUnavailableException e) {
+           updateLabelWithResponse("The server is unavailable :(");
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
     }
 
 

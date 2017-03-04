@@ -7,6 +7,7 @@ import org.androidannotations.rest.spring.annotations.Rest;
 import org.androidannotations.rest.spring.api.RestClientHeaders;
 import org.androidannotations.rest.spring.api.RestClientRootUrl;
 import org.androidannotations.rest.spring.api.RestClientSupport;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
 import static com.cvdevelopers.restfull.api.RestManager.ROOT_URL;
@@ -19,6 +20,6 @@ import static com.cvdevelopers.restfull.api.RestManager.ROOT_URL;
 public interface RestClient extends RestClientHeaders, RestClientRootUrl, RestClientSupport {
 
     @Get("/ping")
-    Response pingServer();
+    ResponseEntity<Response> pingServer();
 
 }

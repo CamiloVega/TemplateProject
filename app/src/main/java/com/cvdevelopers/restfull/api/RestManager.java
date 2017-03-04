@@ -9,7 +9,7 @@ import org.androidannotations.rest.spring.annotations.RestService;
 @EBean(scope = EBean.Scope.Singleton)
 public class RestManager {
 
-    public static final String ROOT_URL = "http://192.168.1.106:3000";
+    public static final String ROOT_URL = "http://192.168.0.4:3000";
 
     @RestService
     RestClient restClient;
